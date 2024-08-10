@@ -5,7 +5,7 @@ const gsvg = require('./lib/gensvg.js');
 // Below is a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
-        err ? console.log(err) : console.log('Successfully created logo.svg file')
+        err ? console.log(err) : console.log('Generated logo.svg')
       );
 }
 
@@ -34,7 +34,6 @@ inquirer
     },
   ])
   .then((answers) => {
-    console.log(answers);
     const xmlSVG = gsvg.gensvg(answers);
     if(xmlSVG != ''){
         writeToFile('./examples/logo.svg', xmlSVG);
