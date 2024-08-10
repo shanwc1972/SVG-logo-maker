@@ -14,7 +14,7 @@ inquirer
     {
       type: 'input',
       name: 'threechars',
-      message: 'Please enter three characters',
+      message: 'Please enter up to three characters',
     },
     {
       type: 'input',
@@ -36,6 +36,10 @@ inquirer
   .then((answers) => {
     console.log(answers);
     const xmlSVG = gsvg.gensvg(answers);
-    console.log(xmlSVG);
-    //writeToFile('./examples/logo.svg', xmlSVG);
+    if(xmlSVG != ''){
+        writeToFile('./examples/logo.svg', xmlSVG);
+    } else {
+        console.log('Input invalid. Error creating logo.svg file.')
+    }
+
   });
