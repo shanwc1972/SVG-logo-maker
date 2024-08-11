@@ -19,6 +19,8 @@ Any vulnerbility warnings received with those respective packages can be ignored
   
 ## Usage
 Application can be started by opening a terminal session within the application's installed folder and running: node index.js. Answer each of the four prompts. Thereafter the application will create either a SVG file, or produce an error message if any of inputs are not valid. The application will only produce a file provided that the text provided is of three characters or less, and that any colors specified are valid. Colors can be specified using a literal string line red, green, etc. Colors can also be specified using a six digit hex notation like #FF00FF. A video showing a demonstation of the application can be found below:
+
+https://drive.google.com/file/d/12S33IWCX3ByuteQmMxYae053fjlz2lHS/view?usp=sharing
   
 ## Contributing
 All code written by Warren Shan. Special thanks to ChatGPT for providing a list of string literals for all 140 color names accepted by all browsers.
